@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -122,87 +122,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Aceptar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\BarraAzul.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\BarraMarron.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\BarraRoja.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\BarraVerde.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Botom.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Buscar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\CajasAlmacen.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Calendario4.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Cancelar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\CerraduraRoja.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\CerraduraVerde.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Crema.jpg" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\DGII.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Favicon.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Fondo1.jpg" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\FondoLogin.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Imagen1.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Logo3.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Modificar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Negra.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Nuevo.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Printer.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\Seleccion.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Aceptar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\BarraAzul.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\BarraMarron.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\BarraRoja.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\BarraVerde.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Botom.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Buscar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\CajasAlmacen.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Calendario4.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Cancelar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\CerraduraRoja.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\CerraduraVerde.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Crema.jpg" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\DGII.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Favicon.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Fondo1.jpg" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\FondoLogin.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Imagen1.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Logo3.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Modificar.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Negra.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Nuevo.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Printer.png" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\Seleccion.png" />
-    <Content Include="IMAGENES\IMAGENES\Aceptar.png" />
-    <Content Include="IMAGENES\IMAGENES\BarraAzul.png" />
-    <Content Include="IMAGENES\IMAGENES\BarraMarron.png" />
-    <Content Include="IMAGENES\IMAGENES\BarraRoja.png" />
-    <Content Include="IMAGENES\IMAGENES\BarraVerde.png" />
-    <Content Include="IMAGENES\IMAGENES\Botom.png" />
-    <Content Include="IMAGENES\IMAGENES\Buscar.png" />
-    <Content Include="IMAGENES\IMAGENES\CajasAlmacen.png" />
-    <Content Include="IMAGENES\IMAGENES\Calendario4.png" />
-    <Content Include="IMAGENES\IMAGENES\Cancelar.png" />
-    <Content Include="IMAGENES\IMAGENES\CerraduraRoja.png" />
-    <Content Include="IMAGENES\IMAGENES\CerraduraVerde.png" />
-    <Content Include="IMAGENES\IMAGENES\Crema.jpg" />
-    <Content Include="IMAGENES\IMAGENES\DGII.png" />
-    <Content Include="IMAGENES\IMAGENES\Favicon.png" />
-    <Content Include="IMAGENES\IMAGENES\Fondo1.jpg" />
-    <Content Include="IMAGENES\IMAGENES\FondoLogin.png" />
-    <Content Include="IMAGENES\IMAGENES\Imagen1.png" />
-    <Content Include="IMAGENES\IMAGENES\Logo3.png" />
-    <Content Include="IMAGENES\IMAGENES\Modificar.png" />
-    <Content Include="IMAGENES\IMAGENES\Negra.png" />
-    <Content Include="IMAGENES\IMAGENES\Nuevo.png" />
-    <Content Include="IMAGENES\IMAGENES\Printer.png" />
-    <Content Include="IMAGENES\IMAGENES\Seleccion.png" />
     <Content Include="LOGIN\FRMLOGIN.aspx" />
-    <Content Include="mantenimiento\deafaultmantenimiento.aspx" />
-    <Content Include="mantenimiento\frmbodega.aspx" />
-    <Content Include="mantenimiento\frmcaja.aspx" />
-    <Content Include="mantenimiento\frmclientes.aspx" />
-    <Content Include="mantenimiento\frmcodigo.aspx" />
-    <Content Include="mantenimiento\frmempresa.aspx" />
-    <Content Include="mantenimiento\frmproductos.aspx" />
-    <Content Include="mantenimiento\frmsuplidores.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -231,14 +151,9 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\FileContentIndex\42ad9634-642a-467d-ade2-8c11fccd6073.vsidx" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\.wsuo" />
-    <Content Include="IMAGENES\IMAGENES\.vs\Imagenes.slnx\v18\DocumentLayout.json" />
-    <Content Include="IMAGENES\IMAGENES\.vs\ProjectSettings.json" />
-    <Content Include="IMAGENES\IMAGENES\.vs\slnx.sqlite" />
-    <Content Include="IMAGENES\IMAGENES\.vs\VSWorkspaceState.json" />
     <Content Include="LOGIN\principal.master" />
     <Content Include="mantenimiento\MPMantenimiento.master" />
+    <Content Include="mantenimiento\Mantenimiento.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -314,65 +229,16 @@
     <Compile Include="LOGIN\principal.master.designer.cs">
       <DependentUpon>principal.master</DependentUpon>
     </Compile>
-    <Compile Include="mantenimiento\deafaultmantenimiento.aspx.cs">
-      <DependentUpon>deafaultmantenimiento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\deafaultmantenimiento.aspx.designer.cs">
-      <DependentUpon>deafaultmantenimiento.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmbodega.aspx.cs">
-      <DependentUpon>frmbodega.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmbodega.aspx.designer.cs">
-      <DependentUpon>frmbodega.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmcaja.aspx.cs">
-      <DependentUpon>frmcaja.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmcaja.aspx.designer.cs">
-      <DependentUpon>frmcaja.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmclientes.aspx.cs">
-      <DependentUpon>frmclientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmclientes.aspx.designer.cs">
-      <DependentUpon>frmclientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmcodigo.aspx.cs">
-      <DependentUpon>frmcodigo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmcodigo.aspx.designer.cs">
-      <DependentUpon>frmcodigo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmempresa.aspx.cs">
-      <DependentUpon>frmempresa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmempresa.aspx.designer.cs">
-      <DependentUpon>frmempresa.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmproductos.aspx.cs">
-      <DependentUpon>frmproductos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmproductos.aspx.designer.cs">
-      <DependentUpon>frmproductos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\frmsuplidores.aspx.cs">
-      <DependentUpon>frmsuplidores.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\frmsuplidores.aspx.designer.cs">
-      <DependentUpon>frmsuplidores.aspx</DependentUpon>
-    </Compile>
     <Compile Include="mantenimiento\MPMantenimiento.master.cs">
       <DependentUpon>MPMantenimiento.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimiento\Mantenimiento.aspx.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimiento\Mantenimiento.aspx.designer.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="mantenimiento\MPMantenimiento.master.designer.cs">
       <DependentUpon>MPMantenimiento.master</DependentUpon>

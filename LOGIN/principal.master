@@ -18,12 +18,13 @@
                     <div id="barraHorizontal">
                         <ul>
                             <li><a href="/Default.aspx">Inicio</a></li>
-                            <li><a href="/mantenimiento/deafaultmantenimiento.aspx">Mantenimiento</a></li>
-                            <li><a href="/mantenimiento/frmempresa.aspx">Operaciones</a></li>
-                            <li><a href="/mantenimiento/frmempresa.aspx">Reportes</a></li>
-                            <li><a href="/mantenimiento/frmempresa.aspx">Seguridad</a></li>
-                            <li><a href="/mantenimiento/frmempresa.aspx">Utilitarios</a></li>
-                            <li><a href="/mantenimiento/frmempresa.aspx">Ayuda</a></li>
+                            <li><a href="/mantenimiento/Mantenimiento.aspx">Mantenimiento</a></li>
+                            <%-- TODO: Operaciones/Reportes/Seguridad/Utilitarios/Ayuda aún apuntan a un marcador temporal. Crear sus páginas y actualizar estos enlaces. --%>
+                            <li><a href="/Default.aspx">Operaciones</a></li>
+                            <li><a href="/Default.aspx">Reportes</a></li>
+                            <li><a href="/Default.aspx">Seguridad</a></li>
+                            <li><a href="/Default.aspx">Utilitarios</a></li>
+                            <li><a href="/Default.aspx">Ayuda</a></li>
                         </ul>
                     </div>
 

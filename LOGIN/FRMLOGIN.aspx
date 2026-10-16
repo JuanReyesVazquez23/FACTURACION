@@ -48,23 +48,10 @@
 <body>
     <form id="form1" runat="server">
         <div id="contenedorLogin">
-            <asp:PlaceHolder ID="PhUnused" runat="server" Visible="false">
-                <asp:Button ID="Button1" runat="server" Text="Button" />
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                <asp:Panel ID="Panel1" runat="server"></asp:Panel>
-                <asp:Panel ID="Panel2" runat="server"></asp:Panel>
-                <asp:Panel ID="Panel3" runat="server"></asp:Panel>
-            </asp:PlaceHolder>
-            <asp:Timer ID="Timer1" runat="server" Enabled="false"></asp:Timer>
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
             <asp:Image ID="ImgCajasAlmacen" runat="server"
-                ImageUrl="~/Imagenes/CajasAlmacen.png" CssClass="CajasAlmacen" Height="430px"
+                ImageUrl="~/IMAGENES/CajasAlmacen.png" CssClass="CajasAlmacen" Height="430px"
                 Width="790px" />
 
             <div id="Logo">
@@ -74,7 +61,7 @@
 
             <asp:Panel ID="PnlAcceso" runat="server" BorderColor="Black" BorderStyle="Solid"
                 CssClass="PnlAcceso" Width="520px" Height="268px"
-                BackImageUrl="~/Imagenes/FondoLogin.png">
+                BackImageUrl="~/IMAGENES/FondoLogin.png">
 
                 <asp:Panel ID="PnlControl" runat="server" Height="37px" Width="520px"
                     BackColor="#3399FF">
@@ -83,7 +70,7 @@
                 </asp:Panel>
 
                 <asp:Image ID="ImgCerradura" runat="server"
-                    ImageUrl="~/Imagenes/CerraduraRoja.png" Height="85px" Width="95px"
+                    ImageUrl="~/IMAGENES/CerraduraRoja.png" Height="85px" Width="95px"
                     CssClass="ImgCerradura" />
 
                 <asp:Label ID="LblUsuario" runat="server" Text="Usuario.:" Font-Bold="True"
@@ -92,11 +79,11 @@
                 <asp:Label ID="LblClave" runat="server" Text="Clave.:" Font-Bold="True"
                     ForeColor="White" Font-Size="Large" CssClass="LblClave"></asp:Label>
 
-                <asp:TextBox ID="TxtUsuario" runat="server" Font-Bold="True" ToolTip="Introdusca su Usuario"
+                <asp:TextBox ID="TxtUsuario" runat="server" Font-Bold="True" ToolTip="Introduzca su Usuario"
                     Font-Size="Large" ForeColor="#0066FF" AutoCompleteType="Disabled"
                     CssClass="TxtUsuario"></asp:TextBox>
 
-                <asp:TextBox ID="TxtClave" runat="server" Font-Bold="True" ToolTip="Introdusca su Clave"
+                <asp:TextBox ID="TxtClave" runat="server" Font-Bold="True" ToolTip="Introduzca su Clave"
                     Font-Size="Large" ForeColor="#0066FF" AutoCompleteType="Disabled"
                     CssClass="TxtClave" TextMode="Password"></asp:TextBox>
 

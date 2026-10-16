@@ -1,18 +1,18 @@
 <%@ Master Language="C#" MasterPageFile="~/LOGIN/principal.master" AutoEventWireup="true" CodeBehind="MPMantenimiento.master.cs" Inherits="FACTURACION.mantenimiento.MPMantenimiento" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="contenidoMenuContextual" runat="server">
+<asp:Content ID="ContentMenuMantenimiento" ContentPlaceHolderID="contenidoMenuContextual" runat="server">
     <ul id="menuContextual">
-        <li><a href="FrmEmpresa.aspx">Crear Empresa</a></li>
-        <li><a href="FrmCaja.aspx">Crear Cajas</a></li>
-        <li><a href="FrmBodega.aspx">Crear Bodegas</a></li>
-        <li><a href="FrmClientes.aspx">Crear Clientes</a></li>
-        <li><a href="FrmProductos.aspx">Crear Productos</a></li>
-        <li><a href="FrmSuplidores.aspx">Crear Suplidores</a></li>
-        <li><a href="FrmCodigo.aspx">Crear Codigo Barra y QR</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#empresa">Crear Empresa</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#cajas">Crear Cajas</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#bodegas">Crear Bodegas</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#clientes">Crear Clientes</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#productos">Crear Productos</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#suplidores">Crear Suplidores</a></li>
+        <li><a runat="server" href="~/mantenimiento/Mantenimiento.aspx#codigo">Crear Codigo Barra y QR</a></li>
     </ul>
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="contenidoPrincipal" runat="server">
-    <asp:ContentPlaceHolder ID="contenidoPrincipal" runat="server">
+<asp:Content ID="ContentPrincipalMantenimiento" ContentPlaceHolderID="contenidoPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoMantenimiento" runat="server">
     </asp:ContentPlaceHolder>
 </asp:Content>
