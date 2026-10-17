@@ -68,5 +68,8 @@
             </div>
         </div>
     </form>
+
+    <%: Scripts.Render("~/bundles/jquery") %>
+    <%: Scripts.Render("~/bundles/site") %>
 </body>
 </html>
