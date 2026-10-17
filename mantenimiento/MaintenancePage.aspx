@@ -3,7 +3,7 @@
 <%@ Page Title="Mantenimiento" Language="C#" MasterPageFile="~/mantenimiento/MaintenanceMaster.master" AutoEventWireup="true" CodeBehind="MaintenancePage.aspx.cs" Inherits="FACTURACION.mantenimiento.MaintenancePage" %>
 
 <asp:Content ID="maintenanceContent" ContentPlaceHolderID="maintenanceContentPlaceholder" runat="server">
-    <div>
+    <div style="display:block; visibility:visible; width:100%; min-height:400px; background:#ffffff;">
         <h2>Mantenimiento</h2>
         <img src="../IMAGENES/CajasAlmacen.png" alt="Mantenimiento" />
         <p>Seleccione una opci&oacute;n del men&uacute; de mantenimiento.</p>
