@@ -15,30 +15,30 @@ namespace FACTURACION.mantenimiento
     {
 
         /// <summary>
-        /// Control ContentMenuMantenimiento.
+        /// Control maintenanceMenuContent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Content ContentMenuMantenimiento;
+        protected global::System.Web.UI.WebControls.Content maintenanceMenuContent;
 
         /// <summary>
-        /// Control ContentPrincipalMantenimiento.
+        /// Control maintenanceMainContent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Content ContentPrincipalMantenimiento;
+        protected global::System.Web.UI.WebControls.Content maintenanceMainContent;
 
         /// <summary>
-        /// Control ContenidoMantenimiento.
+        /// Control maintenanceContentPlaceholder.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContenidoMantenimiento;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder maintenanceContentPlaceholder;
     }
 }

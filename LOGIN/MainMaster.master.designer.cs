@@ -15,13 +15,13 @@ namespace FACTURACION.LOGIN
     {
 
         /// <summary>
-        /// Control head.
+        /// Control headPlaceholder.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder headPlaceholder;
 
         /// <summary>
         /// Control form1.
@@ -41,21 +41,21 @@ namespace FACTURACION.LOGIN
         protected global::System.Web.UI.WebControls.Repeater Repeater1;
 
         /// <summary>
-        /// Control contenidoMenuContextual.
+        /// Control contextualMenuPlaceholder.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenidoMenuContextual;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder contextualMenuPlaceholder;
 
         /// <summary>
-        /// Control contenidoPrincipal.
+        /// Control mainContentPlaceholder.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenidoPrincipal;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder mainContentPlaceholder;
     }
 }

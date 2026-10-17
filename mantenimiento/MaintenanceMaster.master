@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/LOGIN/MainMaster.master" AutoEventWireup="true" CodeBehind="MaintenanceMaster.master.cs" Inherits="FACTURACION.mantenimiento.MaintenanceMaster" %>
 
 <asp:Content ID="maintenanceMenuContent" ContentPlaceHolderID="contextualMenuPlaceholder" runat="server">
-    <ul id="menuContextual">
+    <ul id="contextMenu">
         <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#empresa">Crear Empresa</a></li>
         <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#cajas">Crear Cajas</a></li>
         <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#bodegas">Crear Bodegas</a></li>

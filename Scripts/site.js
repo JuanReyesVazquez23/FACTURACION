@@ -1,114 +1,135 @@
 /*!
- * site.js - JavaScript propio del Sistema de Facturación.
+ * site.js - JavaScript del Sistema de Facturación.
  *
  * Responsabilidades (todas opcionales y tolerantes a fallos):
- *   1. Desplazamiento suave hacia las secciones de MaintenancePage.aspx (#empresa, #cajas, ...).
+ *   1. Desplazamiento suave hacia las secciones de MaintenancePage.aspx.
  *   2. Resaltar la opción activa del menú contextual y de la barra superior.
  *
  * Sin dependencias: no requiere jQuery. Se carga al final del <body>.
  */
+
 (function () {
     "use strict";
 
-    var MENU_CONTEXTUAL = "#menuContextual a";
-    var BARRA_SUPERIOR = "#barraHorizontal a";
-    var SECCIONES = "section[id]";
-    var CLASE_ACTIVA = "activo";
+    // Selectores CSS de los elementos que el script manipula.
+    var CONTEXT_MENU_SELECTOR = "#contextMenu a";
+    var TOP_BAR_SELECTOR = "#topBar a";
+    var SECTIONS_SELECTOR = "section[id]";
+    var ACTIVE_CLASS = "active";
 
-    function rutaActual() {
+    // Devuelve la ruta de la página actual (nombre de archivo en minúsculas).
+    function getCurrentPagePath() {
         return (window.location.pathname.split("/").pop() || "").toLowerCase();
     }
 
-    function hashActual() {
+    // Devuelve el hash actual de la URL sin el símbolo #.
+    function getCurrentHash() {
         return window.location.hash.replace("#", "");
     }
 
     // Indica si un href apunta a la página que se está viendo.
-    function esMismaPagina(href) {
-        var partes = href.split("#");
-        var ruta = partes[0];
-        if (!ruta) {
-            return true; // ancla dentro de la misma página
+    function isSamePage(href) {
+        var parts = href.split("#");
+        var path = parts[0];
+
+        // Si no hay ruta, es un ancla dentro de la misma página.
+        if (!path) {
+            return true;
         }
-        var archivo = ruta.split("/").pop().toLowerCase();
-        return archivo === rutaActual();
+
+        var fileName = path.split("/").pop().toLowerCase();
+        return fileName === getCurrentPagePath();
     }
 
-    function quitarClasesActivas(selector) {
-        var enlaces = document.querySelectorAll(selector);
-        for (var i = 0; i < enlaces.length; i++) {
-            enlaces[i].classList.remove(CLASE_ACTIVA);
+    // Elimina la clase activa de todos los enlaces que coincidan con el selector.
+    function removeActiveClasses(selector) {
+        var links = document.querySelectorAll(selector);
+        for (var i = 0; i < links.length; i++) {
+            links[i].classList.remove(ACTIVE_CLASS);
         }
     }
 
-    function resaltarSeccionActiva() {
-        var hash = hashActual() || primeraSeccion();
-        var enlaces = document.querySelectorAll(MENU_CONTEXTUAL);
-        for (var i = 0; i < enlaces.length; i++) {
-            var destino = (enlaces[i].getAttribute("href") || "").split("#")[1];
-            if (destino === hash) {
-                enlaces[i].classList.add(CLASE_ACTIVA);
+    // Resalta el enlace del menú contextual que corresponde a la sección actual.
+    function highlightActiveSection() {
+        var hash = getCurrentHash() || getFirstSectionId();
+        var links = document.querySelectorAll(CONTEXT_MENU_SELECTOR);
+
+        for (var i = 0; i < links.length; i++) {
+            var target = (links[i].getAttribute("href") || "").split("#")[1];
+            if (target === hash) {
+                links[i].classList.add(ACTIVE_CLASS);
             }
         }
     }
 
-    function primeraSeccion() {
-        var seccion = document.querySelector(SECCIONES);
-        return seccion ? seccion.id : "";
+    // Devuelve el id de la primera sección de la página.
+    function getFirstSectionId() {
+        var section = document.querySelector(SECTIONS_SELECTOR);
+        return section ? section.id : "";
     }
 
-    function resaltarPaginaActiva() {
-        var actual = rutaActual();
-        var enlaces = document.querySelectorAll(BARRA_SUPERIOR);
-        for (var i = 0; i < enlaces.length; i++) {
-            var href = (enlaces[i].getAttribute("href") || "").split("#")[0];
-            if (href && href.toLowerCase().split("/").pop() === actual) {
-                enlaces[i].classList.add(CLASE_ACTIVA);
+    // Resalta el enlace de la barra superior que corresponde a la página actual.
+    function highlightCurrentPage() {
+        var current = getCurrentPagePath();
+        var links = document.querySelectorAll(TOP_BAR_SELECTOR);
+
+        for (var i = 0; i < links.length; i++) {
+            var href = (links[i].getAttribute("href") || "").split("#")[0];
+
+            if (href && href.toLowerCase().split("/").pop() === current) {
+                links[i].classList.add(ACTIVE_CLASS);
             }
         }
     }
 
-    // Intercepta los clics en anclas de la misma página para animar el desplazamiento.
-    function habilitarScrollSuave() {
-        document.addEventListener("click", function (evento) {
-            var enlace = evento.target.closest ? evento.target.closest("a[href*='#']") : null;
-            if (!enlace || !esMismaPagina(enlace.getAttribute("href") || "")) {
+    // Habilita el desplazamiento suave al hacer clic en anclas de la misma página.
+    function enableSmoothScroll() {
+        document.addEventListener("click", function (event) {
+            var link = event.target.closest ? event.target.closest("a[href*='#']") : null;
+
+            // Ignorar clics que no sean en anclas de la misma página.
+            if (!link || !isSamePage(link.getAttribute("href") || "")) {
                 return;
             }
 
-            var id = (enlace.getAttribute("href") || "").split("#")[1];
-            var destino = id ? document.getElementById(id) : null;
-            if (!destino) {
+            var id = (link.getAttribute("href") || "").split("#")[1];
+            var target = id ? document.getElementById(id) : null;
+
+            if (!target) {
                 return;
             }
 
-            evento.preventDefault();
-            destino.scrollIntoView({ behavior: "smooth", block: "start" });
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
 
-            // Actualiza la URL y el resaltado sin recargar.
+            // Actualiza la URL y el resaltado sin recargar la página.
             if (history.pushState) {
                 history.pushState(null, "", "#" + id);
             } else {
                 window.location.hash = id;
             }
-            quitarClasesActivas(MENU_CONTEXTUAL);
-            resaltarSeccionActiva();
+
+            removeActiveClasses(CONTEXT_MENU_SELECTOR);
+            highlightActiveSection();
         });
     }
 
-    function iniciar() {
-        resaltarPaginaActiva();
-        resaltarSeccionActiva();
-        habilitarScrollSuave();
+    // Inicializa el script cuando el DOM está listo.
+    function initialize() {
+        highlightCurrentPage();
+        highlightActiveSection();
+        enableSmoothScroll();
+
+        // Volver a resaltar cuando cambie el hash (navegación por anclas).
         window.addEventListener("hashchange", function () {
-            quitarClasesActivas(MENU_CONTEXTUAL);
-            resaltarSeccionActiva();
+            removeActiveClasses(CONTEXT_MENU_SELECTOR);
+            highlightActiveSection();
         });
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", iniciar);
+        document.addEventListener("DOMContentLoaded", initialize);
     } else {
-        iniciar();
+        initialize();
     }
 })();

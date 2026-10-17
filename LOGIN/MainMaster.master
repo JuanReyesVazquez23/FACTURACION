@@ -15,7 +15,7 @@
         <div id="contenedorApp">
             <div id="cabecera">
                 <div id="contenidoCabecera">
-                    <div id="barraHorizontal">
+                    <div id="topBar">
                         <ul>
                             <li><a href="/Default.aspx">Inicio</a></li>
                             <li><a href="/mantenimiento/MaintenancePage.aspx">MaintenancePage</a></li>
