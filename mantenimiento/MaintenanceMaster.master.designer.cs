@@ -3,42 +3,27 @@
 //     Este código fue generado por una herramienta.
 //
 //     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
-//     se vuelve a generar el código.
+//     se regenera el código.
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
 namespace FACTURACION.mantenimiento
 {
-
-
     public partial class MaintenanceMaster
     {
-
         /// <summary>
-        /// Control maintenanceMenuContent.
+        /// Control de contenido del menú contextual de mantenimiento.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Content maintenanceMenuContent;
 
         /// <summary>
-        /// Control maintenanceMainContent.
+        /// Control de contenido principal de mantenimiento.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Content maintenanceMainContent;
 
         /// <summary>
-        /// Control maintenanceContentPlaceholder.
+        /// Lugar donde se inyecta el contenido de cada página de mantenimiento.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder maintenanceContentPlaceholder;
     }
 }

@@ -3,150 +3,87 @@
 //     Este código fue generado por una herramienta.
 //
 //     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
-//     se vuelve a generar el código.
+//     se regenera el código.
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
 namespace FACTURACION.LOGIN
 {
-
-
     public partial class LoginPage
     {
-
         /// <summary>
-        /// Control form1.
+        /// Control de formulario HTML del servidor.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control scriptManager.
+        /// Administrador de scripts de ASP.NET AJAX.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.ScriptManager scriptManager;
 
         /// <summary>
-        /// Control warehouseImage.
+        /// Imagen de almacén de cajas mostrada en la pantalla de login.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Image warehouseImage;
 
         /// <summary>
-        /// Control accessPanel.
+        /// Panel principal de acceso al sistema.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Panel accessPanel;
 
         /// <summary>
-        /// Control controlPanel.
+        /// Panel de control (barra superior del formulario de login).
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Panel controlPanel;
 
         /// <summary>
-        /// Control controlLabel.
+        /// Etiqueta de título del panel de control.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label controlLabel;
 
         /// <summary>
-        /// Control lockImage.
+        /// Imagen de estado del candado (rojo/verde).
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Image lockImage;
 
         /// <summary>
-        /// Control usernameLabel.
+        /// Etiqueta del campo de usuario.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label usernameLabel;
 
         /// <summary>
-        /// Control passwordLabel.
+        /// Etiqueta del campo de contraseña.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label passwordLabel;
 
         /// <summary>
-        /// Control usernameTextBox.
+        /// Campo de texto para el usuario.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox usernameTextBox;
 
         /// <summary>
-        /// Control passwordTextBox.
+        /// Campo de texto para la contraseña.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passwordTextBox;
 
         /// <summary>
-        /// Control acceptButton.
+        /// Botón de aceptar validación de login.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Button acceptButton;
 
         /// <summary>
-        /// Control messagePanel.
+        /// Panel para mostrar mensajes al usuario.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Panel messagePanel;
 
         /// <summary>
-        /// Control messageLabel.
+        /// Etiqueta del mensaje de resultado del login.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label messageLabel;
 
         /// <summary>
-        /// Control sessionTimer.
+        /// Temporizador de sesión para redirección o limpieza de formulario.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.Timer sessionTimer;
     }
 }

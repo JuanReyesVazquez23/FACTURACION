@@ -3,59 +3,37 @@
 //     Este código fue generado por una herramienta.
 //
 //     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
-//     se vuelve a generar el código. 
+//     se regenera el código.
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
 namespace FACTURACION.LOGIN
 {
-
-
     public partial class MainMaster
     {
-
         /// <summary>
-        /// Control headPlaceholder.
+        /// Lugar donde se inyecta el contenido del encabezado (head).
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder headPlaceholder;
 
         /// <summary>
-        /// Control form1.
+        /// Control de formulario HTML del servidor.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control Repeater1.
+        /// Repetidor para mostrar el logotipo de la empresa desde la base de datos.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Repeater1;
 
         /// <summary>
-        /// Control contextualMenuPlaceholder.
+        /// Lugar donde se inyecta el menú contextual lateral.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder contextualMenuPlaceholder;
 
         /// <summary>
-        /// Control mainContentPlaceholder.
+        /// Lugar donde se inyecta el contenido principal de la página.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder mainContentPlaceholder;
     }
 }

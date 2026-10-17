@@ -3,69 +3,42 @@
 //     Este código fue generado por una herramienta.
 //
 //     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
-//     se vuelve a generar el código. 
+//     se regenera el código.
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
 namespace FACTURACION
 {
-
-
     public partial class HomePage
     {
-
         /// <summary>
-        /// Control codeLabel.
+        /// Etiqueta que muestra el código del usuario logueado.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label codeLabel;
 
         /// <summary>
-        /// Control usernameLabel.
+        /// Etiqueta que muestra el nombre de usuario logueado.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label usernameLabel;
 
         /// <summary>
-        /// Control nameLabel.
+        /// Etiqueta que muestra el nombre del usuario logueado.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label nameLabel;
 
         /// <summary>
-        /// Control surnameLabel.
+        /// Etiqueta que muestra el apellido del usuario logueado.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label surnameLabel;
 
         /// <summary>
-        /// Control departmentLabel.
+        /// Etiqueta que muestra el departamento del usuario logueado.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label departmentLabel;
 
         /// <summary>
-        /// Control roleLabel.
+        /// Etiqueta que muestra el cargo del usuario logueado.
         /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label roleLabel;
     }
 }
