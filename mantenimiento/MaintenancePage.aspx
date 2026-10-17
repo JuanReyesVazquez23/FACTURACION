@@ -1,9 +1,9 @@
-<%@ Page Title="Mantenimiento" Language="C#" MasterPageFile="~/mantenimiento/MPMantenimiento.master" AutoEventWireup="true" CodeBehind="Mantenimiento.aspx.cs" Inherits="FACTURACION.mantenimiento.Mantenimiento" %>
+﻿<%@ Page Title="MaintenancePage" Language="C#" MasterPageFile="~/mantenimiento/MaintenanceMaster.master" AutoEventWireup="true" CodeBehind="MaintenancePage.aspx.cs" Inherits="FACTURACION.mantenimiento.MaintenancePage" %>
 
-<asp:Content ID="ContentMantenimiento" ContentPlaceHolderID="ContenidoMantenimiento" runat="server">
+<asp:Content ID="maintenanceContent" ContentPlaceHolderID="maintenanceContentPlaceholder" runat="server">
     <div>
-        <h2>Mantenimiento</h2>
-        <img src="../IMAGENES/CajasAlmacen.png" alt="Mantenimiento" />
+        <h2>MaintenancePage</h2>
+        <img src="../IMAGENES/CajasAlmacen.png" alt="MaintenancePage" />
         <p>Seleccione una opci&oacute;n del men&uacute; de mantenimiento.</p>
 
         <section id="empresa">

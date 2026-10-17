@@ -121,9 +121,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="LOGIN\FRMLOGIN.aspx" />
-    <Content Include="LOGIN\principal.master" />
-    <Content Include="mantenimiento\MPMantenimiento.master" />
-    <Content Include="mantenimiento\Mantenimiento.aspx" />
+    <Content Include="LOGIN\MainMaster.master" />
+    <Content Include="mantenimiento\MaintenanceMaster.master" />
+    <Content Include="mantenimiento\MaintenancePage.aspx" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
     <Content Include="Scripts\site.js" />
@@ -171,26 +171,26 @@
     <Compile Include="LOGIN\FRMLOGIN.aspx.designer.cs">
       <DependentUpon>FRMLOGIN.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LOGIN\principal.master.cs">
-      <DependentUpon>principal.master</DependentUpon>
+    <Compile Include="LOGIN\MainMaster.master.cs">
+      <DependentUpon>MainMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LOGIN\principal.master.designer.cs">
-      <DependentUpon>principal.master</DependentUpon>
+    <Compile Include="LOGIN\MainMaster.master.designer.cs">
+      <DependentUpon>MainMaster.master</DependentUpon>
     </Compile>
-    <Compile Include="mantenimiento\MPMantenimiento.master.cs">
-      <DependentUpon>MPMantenimiento.master</DependentUpon>
+    <Compile Include="mantenimiento\MaintenanceMaster.master.cs">
+      <DependentUpon>MaintenanceMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mantenimiento\Mantenimiento.aspx.cs">
-      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+    <Compile Include="mantenimiento\MaintenancePage.aspx.cs">
+      <DependentUpon>MaintenancePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mantenimiento\Mantenimiento.aspx.designer.cs">
-      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+    <Compile Include="mantenimiento\MaintenancePage.aspx.designer.cs">
+      <DependentUpon>MaintenancePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mantenimiento\MPMantenimiento.master.designer.cs">
-      <DependentUpon>MPMantenimiento.master</DependentUpon>
+    <Compile Include="mantenimiento\MaintenanceMaster.master.designer.cs">
+      <DependentUpon>MaintenanceMaster.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,51 +1,51 @@
-using System;
+﻿using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace FACTURACION
 {
-    public partial class _Default : System.Web.UI.Page
+    public partial class HomePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             // Validar que el usuario haya iniciado sesion
-            if (Session["Log_Usuario1"] == null)
+            if (Session["LoginUser"] == null)
             {
                 Response.Redirect("~/LOGIN/FRMLOGIN.aspx");
                 return;
             }
 
             //Login Seguridad
-            LblCodigo.Text = (string)Session["Log_Codigo"];
-            LblUsuario.Text = (string)Session["Log_Usuario1"];
-            LblNombre.Text = (string)Session["Log_Nombre"];
-            LblApellido.Text = (string)Session["Log_Apellido"];
-            LblDepartamento.Text = (string)Session["Log_Departamento"];
-            LblCargo.Text = (string)Session["Log_Cargo"];
+            codeLabel.Text = (string)Session["LoginCode"];
+            usernameLabel.Text = (string)Session["LoginUser"];
+            nameLabel.Text = (string)Session["LoginName"];
+            surnameLabel.Text = (string)Session["LoginSurname"];
+            departmentLabel.Text = (string)Session["LoginDepartment"];
+            roleLabel.Text = (string)Session["LoginRole"];
 
             try
             {
-                using (SqlConnection sqlCon = ConexionDB.getInstancia().CrearConexion())
-                using (SqlCommand cmd = new SqlCommand("sp_Insert_SeguridadLogin", sqlCon))
+                using (SqlConnection sqlConnection = DatabaseConnection.GetInstance().CreateConnection())
+                using (SqlCommand sqlCommand = new SqlCommand("sp_Insert_SecurityLog", sqlConnection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    sqlCon.Open();
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlConnection.Open();
 
-                    cmd.Parameters.AddWithValue("@Log_Codigo", LblCodigo.Text ?? "");
-                    cmd.Parameters.AddWithValue("@Log_Usuario1", LblUsuario.Text ?? "");
-                    cmd.Parameters.AddWithValue("@Log_Nombre", LblNombre.Text ?? "");
-                    cmd.Parameters.AddWithValue("@Log_Apellido", LblApellido.Text ?? "");
-                    cmd.Parameters.AddWithValue("@Log_Departamento", LblDepartamento.Text ?? "");
-                    cmd.Parameters.AddWithValue("@Log_Cargo", LblCargo.Text ?? "");
-                    cmd.Parameters.AddWithValue("@Log_FechaEntrada", DateTime.Now);
+                    sqlCommand.Parameters.AddWithValue("@LoginCode", codeLabel.Text ?? "");
+                    sqlCommand.Parameters.AddWithValue("@LoginUser", usernameLabel.Text ?? "");
+                    sqlCommand.Parameters.AddWithValue("@LoginName", nameLabel.Text ?? "");
+                    sqlCommand.Parameters.AddWithValue("@LoginSurname", surnameLabel.Text ?? "");
+                    sqlCommand.Parameters.AddWithValue("@LoginDepartment", departmentLabel.Text ?? "");
+                    sqlCommand.Parameters.AddWithValue("@LoginRole", roleLabel.Text ?? "");
+                    sqlCommand.Parameters.AddWithValue("@Log_FechaEntrada", DateTime.Now);
 
-                    cmd.ExecuteScalar();
+                    sqlCommand.ExecuteScalar();
                 }
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                System.Diagnostics.Debug.WriteLine("Error al insertar seguridad login: " + ex.Message);
+                System.Diagnostics.Debug.WriteLine("Error al insertar seguridad login: " + exception.Message);
             }
         }
     }

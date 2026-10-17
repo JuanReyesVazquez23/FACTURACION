@@ -1,89 +1,89 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace FACTURACION.LOGIN
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class LoginPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             //Iniciar el foco en el primer textbox
-            TxtUsuario.Focus();
+            usernameTextBox.Focus();
         }
 
-        protected void BtnAceptar_Click(object sender, EventArgs e)
+        protected void AcceptButton_Click(object sender, EventArgs e)
         {
             try
             {
-                using (SqlConnection sqlCon = ConexionDB.getInstancia().CrearConexion())
-                using (SqlCommand cmd = new SqlCommand("sp_checlogin", sqlCon))
+                using (SqlConnection sqlConnection = DatabaseConnection.GetInstance().CreateConnection())
+                using (SqlCommand sqlCommand = new SqlCommand("sp_CheckLogin", sqlConnection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@usuario", TxtUsuario.Text.Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@clave", TxtClave.Text.Trim()));
-                    sqlCon.Open();
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.Add(new SqlParameter("@usuario", usernameTextBox.Text.Trim()));
+                    sqlCommand.Parameters.Add(new SqlParameter("@clave", passwordTextBox.Text.Trim()));
+                    sqlConnection.Open();
 
-                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
                     {
-                        if (dr.Read())
+                        if (dataReader.Read())
                         {
                             //Variables de sesion
-                            Session["Log_Status"] = dr["log_status"].ToString();
-                            Session["Log_Codigo"] = dr["log_codigo"].ToString();
-                            Session["Log_Usuario1"] = TxtUsuario.Text;
-                            Session["Log_Nombre"] = dr["log_nombre"].ToString();
-                            Session["Log_Apellido"] = dr["log_apellido"].ToString();
-                            Session["Log_Departamento"] = dr["log_departamento"].ToString();
-                            Session["Log_Cargo"] = dr["log_cargo"].ToString();
+                            Session["LoginStatus"] = dataReader["log_status"].ToString();
+                            Session["LoginCode"] = dataReader["log_codigo"].ToString();
+                            Session["LoginUser"] = usernameTextBox.Text;
+                            Session["LoginName"] = dataReader["log_nombre"].ToString();
+                            Session["LoginSurname"] = dataReader["log_apellido"].ToString();
+                            Session["LoginDepartment"] = dataReader["log_departamento"].ToString();
+                            Session["LoginRole"] = dataReader["log_cargo"].ToString();
 
-                            if (dr["log_status"].ToString() == "Activo")
+                            if (dataReader["log_status"].ToString() == "Activo")
                             {
-                                LblMensaje.Text = "Mensaje.: Login correcto";
+                                messageLabel.Text = "Mensaje.: Login correcto";
 
-                                TxtUsuario.Enabled = false;
-                                TxtClave.Enabled = false;
-                                BtnAceptar.Enabled = false;
+                                usernameTextBox.Enabled = false;
+                                passwordTextBox.Enabled = false;
+                                acceptButton.Enabled = false;
 
-                                ImgCerradura.ImageUrl = "~/IMAGENES/CerraduraVerde.png";
-                                Timer2.Enabled = true;
+                                lockImage.ImageUrl = "~/IMAGENES/CerraduraVerde.png";
+                                sessionTimer.Enabled = true;
                             }
                             else
                             {
-                                LblMensaje.Text = "Mensaje.: Usuario Inhabilitado";
-                                Timer2.Enabled = true;
+                                messageLabel.Text = "Mensaje.: Usuario Inhabilitado";
+                                sessionTimer.Enabled = true;
                             }
                         }
                         else
                         {
-                            LblMensaje.Text = "Mensaje.: Login incorrecto";
-                            Timer2.Enabled = true;
+                            messageLabel.Text = "Mensaje.: Login incorrecto";
+                            sessionTimer.Enabled = true;
                         }
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                System.Diagnostics.Debug.WriteLine("Error de conexion con la Base de Datos: " + ex.Message);
-                LblMensaje.Text = "Mensaje.: No hay conexion con la Base de Datos";
+                System.Diagnostics.Debug.WriteLine("Error de conexion con la Base de Datos: " + exception.Message);
+                messageLabel.Text = "Mensaje.: No hay conexion con la Base de Datos";
             }
         }
 
-        protected void Timer1_Tick1(object sender, EventArgs e)
+        protected void SessionTimer_Tick(object sender, EventArgs e)
         {
             //Acceder al menu de la aplicacion y quitar mensajes
-            if (LblMensaje.Text == "Mensaje.: Login correcto")
+            if (messageLabel.Text == "Mensaje.: Login correcto")
             {
                 Response.Redirect("~/Default.aspx");
             }
             else
             {
-                LblMensaje.Text = "";
-                Timer2.Enabled = false;
-                TxtUsuario.Enabled = true;
-                TxtClave.Enabled = true;
-                BtnAceptar.Enabled = true;
-                TxtUsuario.Focus();
+                messageLabel.Text = "";
+                sessionTimer.Enabled = false;
+                usernameTextBox.Enabled = true;
+                passwordTextBox.Enabled = true;
+                acceptButton.Enabled = true;
+                usernameTextBox.Focus();
             }
         }
     }

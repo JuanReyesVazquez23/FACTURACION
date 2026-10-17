@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="principal.master.cs" Inherits="FACTURACION.LOGIN.principal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="FACTURACION.LOGIN.MainMaster" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=1280, initial-scale=1.0"/>
     <title>Sistema de Facturacion</title>
     <link rel="shortcut icon" type="image/x-icon" href="/IMAGENES/Favicon.png"/>
-    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="headPlaceholder" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -18,7 +18,7 @@
                     <div id="barraHorizontal">
                         <ul>
                             <li><a href="/Default.aspx">Inicio</a></li>
-                            <li><a href="/mantenimiento/Mantenimiento.aspx">Mantenimiento</a></li>
+                            <li><a href="/mantenimiento/MaintenancePage.aspx">MaintenancePage</a></li>
                             <%-- TODO: Operaciones/Reportes/Seguridad/Utilitarios/Ayuda aún apuntan a un marcador temporal. Crear sus páginas y actualizar estos enlaces. --%>
                             <li><a href="/Default.aspx">Operaciones</a></li>
                             <li><a href="/Default.aspx">Reportes</a></li>
@@ -31,7 +31,7 @@
                     <div id="logotipo">
                         <%--Llamar imagen de la Base de datos--%>
                         <div class="row">
-                            <asp:Repeater ID="Repeater1" runat="server">
+                            <asp:Repeater ID="logoRepeater" runat="server">
                                 <ItemTemplate>
                                     <div class="col-md-4">
                                         <img class="img-responsive" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem, "Emp_Logo"))%>" />
@@ -50,12 +50,12 @@
 
             <div id="bajo">
                 <div id="columnIzq">
-                    <asp:ContentPlaceHolder ID="contenidoMenuContextual" runat="server">
+                    <asp:ContentPlaceHolder ID="contextualMenuPlaceholder" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
 
                 <div id="columnCentro">
-                    <asp:ContentPlaceHolder ID="contenidoPrincipal" runat="server">
+                    <asp:ContentPlaceHolder ID="mainContentPlaceholder" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
 

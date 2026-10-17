@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FRMLOGIN.aspx.cs" Inherits="FACTURACION.LOGIN.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FRMLOGIN.aspx.cs" Inherits="FACTURACION.LOGIN.LoginPage" %>
 
 <!DOCTYPE html>
 
@@ -48,9 +48,9 @@
 <body>
     <form id="form1" runat="server">
         <div id="contenedorLogin">
-            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:ScriptManager ID="scriptManager" runat="server"></asp:ScriptManager>
 
-            <asp:Image ID="ImgCajasAlmacen" runat="server"
+            <asp:Image ID="warehouseImage" runat="server"
                 ImageUrl="~/IMAGENES/CajasAlmacen.png" CssClass="CajasAlmacen" Height="430px"
                 Width="790px" />
 
@@ -59,47 +59,47 @@
                 <h3>DE FACTURACION ELECTRONICA</h3>
             </div>
 
-            <asp:Panel ID="PnlAcceso" runat="server" BorderColor="Black" BorderStyle="Solid"
-                CssClass="PnlAcceso" Width="520px" Height="268px"
+            <asp:Panel ID="accessPanel" runat="server" BorderColor="Black" BorderStyle="Solid"
+                CssClass="accessPanel" Width="520px" Height="268px"
                 BackImageUrl="~/IMAGENES/FondoLogin.png">
 
-                <asp:Panel ID="PnlControl" runat="server" Height="37px" Width="520px"
+                <asp:Panel ID="controlPanel" runat="server" Height="37px" Width="520px"
                     BackColor="#3399FF">
-                    <asp:Label ID="LblControl" runat="server" Text="Control de Acceso" Font-Bold="True"
-                        ForeColor="White" Font-Size="Larger" CssClass="LblControl"></asp:Label>
+                    <asp:Label ID="controlLabel" runat="server" Text="Control de Acceso" Font-Bold="True"
+                        ForeColor="White" Font-Size="Larger" CssClass="controlLabel"></asp:Label>
                 </asp:Panel>
 
-                <asp:Image ID="ImgCerradura" runat="server"
+                <asp:Image ID="lockImage" runat="server"
                     ImageUrl="~/IMAGENES/CerraduraRoja.png" Height="85px" Width="95px"
-                    CssClass="ImgCerradura" />
+                    CssClass="lockImage" />
 
-                <asp:Label ID="LblUsuario" runat="server" Text="Usuario.:" Font-Bold="True"
-                    ForeColor="White" Font-Size="Large" CssClass="LblUsuario"></asp:Label>
+                <asp:Label ID="usernameLabel" runat="server" Text="Usuario.:" Font-Bold="True"
+                    ForeColor="White" Font-Size="Large" CssClass="usernameLabel"></asp:Label>
 
-                <asp:Label ID="LblClave" runat="server" Text="Clave.:" Font-Bold="True"
-                    ForeColor="White" Font-Size="Large" CssClass="LblClave"></asp:Label>
+                <asp:Label ID="passwordLabel" runat="server" Text="Clave.:" Font-Bold="True"
+                    ForeColor="White" Font-Size="Large" CssClass="passwordLabel"></asp:Label>
 
-                <asp:TextBox ID="TxtUsuario" runat="server" Font-Bold="True" ToolTip="Introduzca su Usuario"
+                <asp:TextBox ID="usernameTextBox" runat="server" Font-Bold="True" ToolTip="Introduzca su Usuario"
                     Font-Size="Large" ForeColor="#0066FF" AutoCompleteType="Disabled"
-                    CssClass="TxtUsuario"></asp:TextBox>
+                    CssClass="usernameTextBox"></asp:TextBox>
 
-                <asp:TextBox ID="TxtClave" runat="server" Font-Bold="True" ToolTip="Introduzca su Clave"
+                <asp:TextBox ID="passwordTextBox" runat="server" Font-Bold="True" ToolTip="Introduzca su Clave"
                     Font-Size="Large" ForeColor="#0066FF" AutoCompleteType="Disabled"
-                    CssClass="TxtClave" TextMode="Password"></asp:TextBox>
+                    CssClass="passwordTextBox" TextMode="Password"></asp:TextBox>
 
-                <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" Font-Bold="True"
+                <asp:Button ID="acceptButton" runat="server" Text="Aceptar" Font-Bold="True"
                     ToolTip="Presione para Aceptar la validacion" BorderStyle="Outset" Width="80px"
-                    Height="40px" CssClass="BtnAceptar" OnClick="BtnAceptar_Click"/>
+                    Height="40px" CssClass="acceptButton" OnClick="AcceptButton_Click"/>
 
-                <asp:Panel ID="PnlMensaje" runat="server" Height="37px" Width="520px"
-                    CssClass="PnlMensaje" BackColor="Black">
-                    <asp:Label ID="LblMensaje" runat="server" Text="Mensaje.:" Font-Bold="True"
-                        ForeColor="White" CssClass="LblMensaje"></asp:Label>
+                <asp:Panel ID="messagePanel" runat="server" Height="37px" Width="520px"
+                    CssClass="messagePanel" BackColor="Black">
+                    <asp:Label ID="messageLabel" runat="server" Text="Mensaje.:" Font-Bold="True"
+                        ForeColor="White" CssClass="messageLabel"></asp:Label>
                 </asp:Panel>
             </asp:Panel>
 
-            <asp:Timer ID="Timer2" runat="server" Interval="5000" Enabled="False"
-                OnTick="Timer1_Tick1"></asp:Timer>
+            <asp:Timer ID="sessionTimer" runat="server" Interval="5000" Enabled="False"
+                OnTick="SessionTimer_Tick"></asp:Timer>
         </div>
     </form>
 </body>

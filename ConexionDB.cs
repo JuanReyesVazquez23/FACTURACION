@@ -1,31 +1,31 @@
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SqlClient;
 
 namespace FACTURACION
 {
-    public class ConexionDB
+    public class DatabaseConnection
     {
-        private static ConexionDB _instancia;
+        private static DatabaseConnection _instance;
 
-        private ConexionDB()
+        private DatabaseConnection()
         {
         }
 
-        public static ConexionDB getInstancia()
+        public static DatabaseConnection GetInstance()
         {
-            if (_instancia == null)
+            if (_instance == null)
             {
-                _instancia = new ConexionDB();
+                _instance = new DatabaseConnection();
             }
-            return _instancia;
+            return _instance;
         }
 
         // Crea una conexión usando la cadena "CnFact" del Web.config.
-        public SqlConnection CrearConexion()
+        public SqlConnection CreateConnection()
         {
-            var cnSetting = ConfigurationManager.ConnectionStrings["CnFact"];
-            string connectionString = cnSetting != null && !string.IsNullOrWhiteSpace(cnSetting.ConnectionString)
-                ? cnSetting.ConnectionString
+            var connectionSetting = ConfigurationManager.ConnectionStrings["CnFact"];
+            string connectionString = connectionSetting != null && !string.IsNullOrWhiteSpace(connectionSetting.ConnectionString)
+                ? connectionSetting.ConnectionString
                 : "Server=localhost; Database=Facturacion; Integrated Security=SSPI;";
 
             return new SqlConnection(connectionString);

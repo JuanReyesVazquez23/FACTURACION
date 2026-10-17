@@ -1,4 +1,4 @@
-//------------------------------------------------------------------------------
+﻿//------------------------------------------------------------------------------
 // <generado automáticamente>
 //     Este código fue generado por una herramienta.
 //
@@ -9,7 +9,7 @@
 
 namespace FACTURACION.mantenimiento
 {
-    public partial class Mantenimiento
+    public partial class MaintenancePage
     {
     }
 }

@@ -2,7 +2,7 @@
  * site.js - JavaScript propio del Sistema de Facturación.
  *
  * Responsabilidades (todas opcionales y tolerantes a fallos):
- *   1. Desplazamiento suave hacia las secciones de Mantenimiento.aspx (#empresa, #cajas, ...).
+ *   1. Desplazamiento suave hacia las secciones de MaintenancePage.aspx (#empresa, #cajas, ...).
  *   2. Resaltar la opción activa del menú contextual y de la barra superior.
  *
  * Sin dependencias: no requiere jQuery. Se carga al final del <body>.

@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/LOGIN/MainMaster.master" AutoEventWireup="true" CodeBehind="MaintenanceMaster.master.cs" Inherits="FACTURACION.mantenimiento.MaintenanceMaster" %>
+
+<asp:Content ID="maintenanceMenuContent" ContentPlaceHolderID="contextualMenuPlaceholder" runat="server">
+    <ul id="menuContextual">
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#empresa">Crear Empresa</a></li>
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#cajas">Crear Cajas</a></li>
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#bodegas">Crear Bodegas</a></li>
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#clientes">Crear Clientes</a></li>
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#productos">Crear Productos</a></li>
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#suplidores">Crear Suplidores</a></li>
+        <li><a runat="server" href="~/mantenimiento/MaintenancePage.aspx#codigo">Crear Codigo Barra y QR</a></li>
+    </ul>
+</asp:Content>
+
+<asp:Content ID="maintenanceMainContent" ContentPlaceHolderID="mainContentPlaceholder" runat="server">
+    <asp:ContentPlaceHolder ID="maintenanceContentPlaceholder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

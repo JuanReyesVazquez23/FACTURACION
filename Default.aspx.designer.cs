@@ -11,61 +11,61 @@ namespace FACTURACION
 {
 
 
-    public partial class _Default
+    public partial class HomePage
     {
 
         /// <summary>
-        /// Control LblCodigo.
+        /// Control codeLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCodigo;
+        protected global::System.Web.UI.WebControls.Label codeLabel;
 
         /// <summary>
-        /// Control LblUsuario.
+        /// Control usernameLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblUsuario;
+        protected global::System.Web.UI.WebControls.Label usernameLabel;
 
         /// <summary>
-        /// Control LblNombre.
+        /// Control nameLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblNombre;
+        protected global::System.Web.UI.WebControls.Label nameLabel;
 
         /// <summary>
-        /// Control LblApellido.
+        /// Control surnameLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblApellido;
+        protected global::System.Web.UI.WebControls.Label surnameLabel;
 
         /// <summary>
-        /// Control LblDepartamento.
+        /// Control departmentLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDepartamento;
+        protected global::System.Web.UI.WebControls.Label departmentLabel;
 
         /// <summary>
-        /// Control LblCargo.
+        /// Control roleLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCargo;
+        protected global::System.Web.UI.WebControls.Label roleLabel;
     }
 }
